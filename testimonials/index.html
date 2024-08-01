@@ -323,58 +323,18 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     margin-bottom: 1em; /* Ajouter un espacement inférieur */
   }
 }
-/* Style pour le bouton du menu déroulant */
-.dropbtn {
-  background-color: #fff;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  width: 50%;
-}
-
-/* Conteneur du menu déroulant */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-/* Contenu du menu déroulant (les liens) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 200px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  width: 100%;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  width: 100%;
-}
-
-/* Change la couleur des liens au survol */
-.dropdown-content a:hover {background-color: #fff}
-
-/* Afficher le contenu du menu déroulant au survol */
-.dropdown:hover .dropdown-content {
-  display: block;
-  background-color: #fff;
-}
-
-/* Change la couleur du bouton du menu déroulant au survol */
-.dropdown:hover .dropbtn {
-  background-color: #00ff73;
-}
 
 </style>
+<style>
+  .dropdown-content a {
+    color: black;
+    text-decoration: none; /* Optionnel : enlève la décoration par défaut des liens */
+  }
+  .dropdown-content a:hover {
+    text-decoration: underline; /* Optionnel : ajoute une décoration au survol */
+  }
+</style>
+
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><!--[if IE]>
 <script src="https://websitedemos.net/interior-firm-02/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=4.7.2" id="astra-flexibility-js"></script>
 <script id="astra-flexibility-js-after">
@@ -499,7 +459,7 @@ Skip to content</a>
 
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="../about/index.html" class="menu-link">A propos</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="../testimonials/index.html" class="menu-link">Services</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-6 current_page_item menu-item-21"><a href="../portfolio/index.html" aria-current="page" class="menu-link">Portfolio</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-6 current_page_item menu-item-21"><a href="../portfolio/index.html" aria-current="page" class="menu-link">CORBUSIER BUSINESS BAT</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="../contact/index.html" class="menu-link">Contacts</a></li>
 </ul></div></nav></div></div> </div>
 </div>
@@ -519,11 +479,11 @@ Skip to content</a>
 <div class="elementor-element elementor-element-0be74fc e-con-full e-flex e-con e-child" data-id="0be74fc" data-element_type="container">
 <div class="elementor-element elementor-element-46e38c0 elementor-widget elementor-widget-heading" data-id="46e38c0" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
-<h6 class="elementor-heading-title elementor-size-default">Nos Clients exclusifs</h6> </div>
+<h6 class="elementor-heading-title elementor-size-default">Services</h6> </div>
 </div>
 <div class="elementor-element elementor-element-66136e5 elementor-widget elementor-widget-heading" data-id="66136e5" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
-<h1 class="elementor-heading-title elementor-size-default">Nos projets</h1> </div>
+<h1 class="elementor-heading-title elementor-size-default">Nos Services</h1> </div>
 </div>
 <div class="elementor-element elementor-element-302c242 elementor-widget elementor-widget-heading" data-id="302c242" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
@@ -551,15 +511,18 @@ Skip to content</a>
 <div class="e-con-inner">
 <div class="elementor-element elementor-element-7957e3b e-con-full e-flex e-con e-child" data-id="7957e3b" data-element_type="container">
 <div class="elementor-element elementor-element-f9aef8f elementor-widget elementor-widget-heading" data-id="f9aef8f" data-element_type="widget" data-widget_type="heading.default">
+  <h2>Architecture et Génie civil</h2>
+
 <div class="elementor-widget-container">
   <div class="dropdown">
-    <button class="dropbtn">Architecture et Génie civil</button>
     <div class="dropdown-content">
-      <a href="#ingenierie-civile">Ingénierie civile</a>
-      <a href="#conception-architecturale">Conception architecturale</a>
-      <a href="#etudes-faisabilite">Études de faisabilité</a>
-      <a href="#planification-projet">Planification de projet</a>
-      <a href="#construction-ouvrages">Construction d'ouvrages</a>
+      <ul>
+      <li><a href="#ingenierie-civile">Ingénierie civile</a></li>
+      <li><a href="#conception-architecturale">Conception architecturale</a></li>
+      <li><a href="#etudes-faisabilite">Études de faisabilité</a></li>
+      <li><a href="#planification-projet">Planification de projet</a></li>
+      <li><a href="#construction-ouvrages">Construction d'ouvrages</a></li>
+    </ul>
     </div>
   </div>
 
@@ -615,15 +578,17 @@ Skip to content</a>
 <div class="e-con-inner">
 <div class="elementor-element elementor-element-1a9e5a7 e-con-full e-flex e-con e-child" data-id="1a9e5a7" data-element_type="container">
 <div class="elementor-element elementor-element-c06e95b elementor-widget elementor-widget-heading" data-id="c06e95b" data-element_type="widget" data-widget_type="heading.default">
+  <h2>Travaux de terrassement et de nivellement</h2>
+
 <div class="elementor-widget-container">
   <div class="dropdown">
-    <button class="dropbtn">Travaux de terrassement et de nivellement</button>
-    <div class="dropdown-content">
-      <a href="#ingenierie-civile">Topographie et mappage du terrain </a>
-      <a href="#conception-architecturale">Préparation de terrains pour la construction</a>
-      <a href="#etudes-faisabilite">Excavation</a>
-      <a href="#planification-projet">le nivellement et la préparation des sols</a>
-    </div>
+    <ul class="dropdown-content">
+      <li><a href="#ingenierie-civile">Topographie et mappage du terrain</a></li>
+      <li><a href="#conception-architecturale">Préparation de terrains pour la construction</a></li>
+      <li><a href="#etudes-faisabilite">Excavation</a></li>
+      <li><a href="#planification-projet">Le nivellement et la préparation des sols</a></li>
+    </ul>
+    
   </div>
 </div>
 </div>
@@ -680,13 +645,17 @@ Skip to content</a>
 <div class="e-con-inner">
 <div class="elementor-element elementor-element-e4ab549 e-con-full e-flex e-con e-child" data-id="e4ab549" data-element_type="container">
 <div class="elementor-element elementor-element-14d7127 elementor-widget elementor-widget-heading" data-id="14d7127" data-element_type="widget" data-widget_type="heading.default">
+  <h2>Construction de bâtiments</h2>
+
 <div class="elementor-widget-container">
   <div class="dropdown">
-    <button class="dropbtn">Construction de bâtiments</button>
     <div class="dropdown-content">
-      <a href="#ingenierie-civile">construction de structures : résidentielles / commerciales / industrielles</a>
-      <a href="#conception-architecturale">Rénovation</a>
-      <a href="#etudes-faisabilite">agrandissement de bâtiments existants</a>
+      <ul class="dropdown-content">
+        <li><a href="#ingenierie-civile">Construction de structures : résidentielles / commerciales / industrielles</a></li>
+        <li><a href="#conception-architecturale">Rénovation</a></li>
+        <li><a href="#etudes-faisabilite">Agrandissement de bâtiments existants</a></li>
+      </ul>
+      
 
     </div>
   </div>
@@ -728,58 +697,57 @@ Skip to content</a>
 <br>
 <br>
 <footer class="site-footer" id="colophon" itemtype="https://schema.org/WPFooter" itemscope="itemscope" itemid="#colophon">
-<div class="site-primary-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-4-equal ast-builder-grid-row-tablet-4-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-primary-footer-builder">
-<div class="ast-builder-grid-row-container-inner">
-<div class="ast-builder-footer-grid-columns site-primary-footer-inner-wrap ast-builder-grid-row">
-<div class="site-footer-primary-section-1 site-footer-section site-footer-section-1">
-<aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-1" aria-label="Footer Widget 1">
-<section id="media_image-3" class="widget widget_media_image"><img width="150" height="150" src="../wp-content/uploads/sites/285/2020/08/log.png" class="image wp-image-1020  attachment-thumbnail size-thumbnail" alt style="max-width: 100%; height: auto;" decoding="async" /></section><section id="text-3" class="widget widget_text"> <div class="textwidget"><p>Unissons nos expertises pour bâtir l’avenir</p>
-</div>
-</section> </aside>
-</div>
-<div class="site-footer-primary-section-2 site-footer-section site-footer-section-2">
-<aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-2" aria-label="Footer Widget 2">
-<section id="nav_menu-3" class="widget widget_nav_menu"><h2 class="widget-title">CBB-ARCHITECTURE</h2><nav class="menu-our-company-container" aria-label="Our Company"><ul id="menu-our-company" class="menu"><li id="menu-item-1189" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1189"><a href="#" class="menu-link">A propos</a></li>
-<li id="menu-item-1190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1190"><a href="#" class="menu-link">Portfolio</a></li>
-<li id="menu-item-1191" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1191"><a href="#" class="menu-link">Services</a></li>
-<li id="menu-item-1192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1192"><a href="#" class="menu-link">Contact</a></li>
-</ul></nav></section> </aside>
-</div>
-<div class="site-footer-primary-section-3 site-footer-section site-footer-section-3">
-<aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-3" aria-label="Footer Widget 3">
-<section id="nav_menu-4" class="widget widget_nav_menu"><h2 class="widget-title">Suivez-nous</h2><nav class="menu-get-in-touch-container" aria-label="Get In Touch"><ul id="menu-get-in-touch" class="menu"><li id="menu-item-1193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1193"><a href="#" class="menu-link">Linkedin</a></li>
-<li id="menu-item-1194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194"><a href="#" class="menu-link">Facebook</a></li>
-<li id="menu-item-1195" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1195"><a href="#" class="menu-link">Yelp</a></li>
-<li id="menu-item-1196" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1196"><a href="#" class="menu-link">Houzz</a></li>
-</ul></nav></section> </aside>
-</div>
-<div class="site-footer-primary-section-4 site-footer-section site-footer-section-4">
-<aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-4" aria-label="Footer Widget 4">
-<section id="nav_menu-5" class="widget widget_nav_menu"><h2 class="widget-title">Infos contacts</h2><nav class="menu-contact-info-container" aria-label="Contact Info"><ul id="menu-contact-info" class="menu"><li id="menu-item-1197" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1197"><a href="#" class="menu-link">Sicap Baobab villa 901 R.C.1.</a></li>
-<li id="menu-item-1198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1198"><a href="#" class="menu-link">(+221) 78 797 89 62 – 78 797 89 63 ​</a></li>
-<li id="menu-item-1199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1199"><a href="#" class="menu-link"><span class="__cf_email__" data-cfemail="a0c3cfced4c1c3d4e0c5d8c1cdd0ccc58ec3cfcd"> secretrariat.cbb@cbbsarl.com</span>​​</a></li>
-</ul></nav></section> </aside>
-</div>
-</div>
-</div>
-</div>
-<div class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-2-equal ast-builder-grid-row-tablet-2-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-below-footer-builder">
-<div class="ast-builder-grid-row-container-inner">
-<div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row">
-<div class="site-footer-below-section-1 site-footer-section site-footer-section-1">
-<div class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright" data-section="section-footer-builder">
-<div class="ast-footer-copyright"><p>Copyright © Cbb - Architecture 2024 </p>
-</div> </div>
-</div>
-<div class="site-footer-below-section-2 site-footer-section site-footer-section-2">
-<div class="footer-widget-area widget-area site-footer-focus-item ast-footer-html-1" data-section="section-fb-html-1">
-<div class="ast-header-html inner-link-style-"><div class="ast-builder-html-element"><p>Powered by cbb - architecture</p>
-</div></div> </div>
-</div>
-</div>
-</div>
-</div>
-</footer>
+  <div class="site-primary-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-4-equal ast-builder-grid-row-tablet-4-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-primary-footer-builder">
+  <div class="ast-builder-grid-row-container-inner">
+  <div class="ast-builder-footer-grid-columns site-primary-footer-inner-wrap ast-builder-grid-row">
+  <div class="site-footer-primary-section-1 site-footer-section site-footer-section-1">
+  <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-1" aria-label="Footer Widget 1">
+  <section id="media_image-3" class="widget widget_media_image"><img width="150" height="150" src="file:///C:/Users/USER/Desktop/const--main/wp-content/uploads/sites/285/2020/08/logo.png" class="image wp-image-1020  attachment-thumbnail size-thumbnail" alt style="max-width: 100%; height: auto;" decoding="async" /></section><section id="text-3" class="widget widget_text"> <div class="textwidget"><p>Unissons nos expertises pour bâtir l’avenir</p>
+  </div>
+  </section> </aside>
+  </div>
+  <div class="site-footer-primary-section-2 site-footer-section site-footer-section-2">
+  <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-2" aria-label="Footer Widget 2">
+  <section id="nav_menu-3" class="widget widget_nav_menu"><h2 class="widget-title">CBB </h2><nav class="menu-our-company-container" aria-label="Our Company"><ul id="menu-our-company" class="menu"><li id="menu-item-1189" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1189"><a href="#" class="menu-link">A propos</a></li>
+  <li id="menu-item-1190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1190"><a href="#" class="menu-link">Portfolio</a></li>
+  <li id="menu-item-1191" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1191"><a href="#" class="menu-link">Services</a></li>
+  <li id="menu-item-1192" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1192"><a href="#" class="menu-link">Contact</a></li>
+  </ul></nav></section> </aside>
+  </div>
+  <div class="site-footer-primary-section-3 site-footer-section site-footer-section-3">
+  <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-3" aria-label="Footer Widget 3">
+  <section id="nav_menu-4" class="widget widget_nav_menu"><h2 class="widget-title">Nos offres</h2><nav class="menu-get-in-touch-container" aria-label="Get In Touch"><ul id="menu-get-in-touch" class="menu"><li id="menu-item-1193" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1193"><a href="#" class="menu-link">Architecture et Génie civil</a></li>
+  <li id="menu-item-1194" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1194"><a href="#" class="menu-link">Travaux de terrassement et de nivellement</a></li>
+  <li id="menu-item-1195" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1195"><a href="#" class="menu-link">Construction de bâtiments</a></li>
+  </ul></nav></section> </aside>
+  </div>
+  <div class="site-footer-primary-section-4 site-footer-section site-footer-section-4">
+  <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-4" aria-label="Footer Widget 4">
+  <section id="nav_menu-5" class="widget widget_nav_menu"><h2 class="widget-title">Infos contacts</h2><nav class="menu-contact-info-container" aria-label="Contact Info"><ul id="menu-contact-info" class="menu"><li id="menu-item-1197" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1197"><a href="#" class="menu-link">Sicap Baobab villa 901 R.C.1.</a></li>
+  <li id="menu-item-1198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1198"><a href="#" class="menu-link">(+221) 78 797 89 62 – 78 797 89 63 ​</a></li>
+  <li id="menu-item-1199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1199"><a href="#" class="menu-link"><span class="__cf_email__" data-cfemail="a0c3cfced4c1c3d4e0c5d8c1cdd0ccc58ec3cfcd"> secretrariat.cbb@cbbsarl.com</span>​​</a></li>
+  </ul></nav></section> </aside>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-2-equal ast-builder-grid-row-tablet-2-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack" data-section="section-below-footer-builder">
+  <div class="ast-builder-grid-row-container-inner">
+  <div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row">
+  <div class="site-footer-below-section-1 site-footer-section site-footer-section-1">
+  <div class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright" data-section="section-footer-builder">
+  <div class="ast-footer-copyright"><p>Copyright © Cbb - Architecture 2024 </p>
+  </div> </div>
+  </div>
+  <div class="site-footer-below-section-2 site-footer-section site-footer-section-2">
+  <div class="footer-widget-area widget-area site-footer-focus-item ast-footer-html-1" data-section="section-fb-html-1">
+  <div class="ast-header-html inner-link-style-"><div class="ast-builder-html-element"><p>Powered by cbb - architecture</p>
+  </div></div> </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </footer>
 </div>
 <div id="showcase-cta-entry-root" class="st-customizer-cta st-section-root"></div> <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
 				const lazyloadRunObserver = () => {
