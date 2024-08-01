@@ -251,18 +251,31 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   font-weight: 900;
   src: url(https://websitedemos.net/fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoJYOmb2Rm.ttf) format('truetype');
 }
+.elementor-widget-testimonial {
+  background-color: #96f2bf; /* Remplacez cette couleur par celle de votre choix */
+  padding: 20px; /* Facultatif : Ajoute de l'espace à l'intérieur de l'élément */
+  border-radius: 5px; /* Facultatif : Arrondit les coins */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Facultatif : Ajoute une ombre pour un effet de profondeur */
+}
+
+
 .main-header-bar {
   position: fixed; /* Fixer la barre de navigation en haut de la page */
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; /* S'assurer que la largeur est de 100% */
   z-index: 1000; /* Assurez-vous qu'elle est au-dessus des autres éléments */
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: none; /* Supprimer l'ombre pour une apparence plus plate */
+  background-color: transparent; /* Fond transparent par défaut */
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Ajouter une transition pour l'effet de défilement */
+  padding: 2px 0; /* Réduire le padding pour diminuer la hauteur */
   border: none; /* Supprimer toute bordure */
 }
 
-/* Assurez-vous que le contenu ne se chevauche pas avec la barre fixée */
+/* Classe ajoutée lors du défilement */
+.main-header-bar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond noire avec 80% d'opacité */
+  padding: 5px 0; /* Ajouter un padding pour augmenter la hauteur lors du défilement */
+}
 
 /* Alignement du logo et des liens dans la barre de navigation */
 .main-header-bar .main-header-bar-navigation {
@@ -278,7 +291,10 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 }
 
 .main-header-bar .site-branding img {
+  width: 100%; /* Assurer que le logo est responsive */
+  height: auto; /* Conserver les proportions du logo */
   display: block; /* Assurez-vous que l'image du logo ne génère pas de marge ou de padding indésirable */
+  margin-bottom: 10px; /* Ajouter un espacement inférieur */
 }
 
 /* Gestion des sous-menus */
@@ -291,7 +307,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   position: absolute;
   top: 100%; /* Positionner les sous-menus sous l'élément parent */
   left: 0;
-  background: #333; /* Choisissez une couleur de fond pour les sous-menus */
+  background: #000; /* Couleur de fond noire pour les sous-menus */
   box-shadow: none; /* Supprimer l'ombre des sous-menus */
   z-index: 1000; /* Assurez-vous qu'ils sont au-dessus des autres éléments */
 }
@@ -490,13 +506,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 </div>
-<p>Vous etes prets a lancer votre projet ?</p>
 
 <div class="elementor-element elementor-element-dee681c elementor-widget elementor-widget-button" data-id="dee681c" data-element_type="widget" data-widget_type="button.default">
 <div class="elementor-widget-container">
-
+<p style="margin-top: 40px; color: white;">Vous êtes prêts à lancer votre projet ?</p>
 <div class="elementor-button-wrapper" style="display: flex; align-items: center;">
-  <input type="email" placeholder="Parlez dès maintenant avec un expert" style="margin-right: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; width: 100%; max-width: 300px; box-sizing: border-box;" />
+ 
+    
+    <input type="email" placeholder="Parlez dès maintenant avec un expert" style="margin-right: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; width: 100%; max-width: 300px; box-sizing: border-box;" />
 
     <style>
         @media (max-width: 768px) {
@@ -504,7 +521,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 margin-right: 0; /* Supprime la marge à droite sur les petits écrans */
             }
         }
+       
     </style>
+  
 <a class="elementor-button elementor-button-link elementor-size-sm" href="contact/index.html">
 <span class="elementor-button-content-wrapper">
 <span class="elementor-button-icon">
@@ -892,7 +911,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="elementor-element elementor-element-c4cc990 elementor-widget elementor-widget-testimonial" data-id="c4cc990" data-element_type="widget" data-widget_type="testimonial.default">
 <div class="elementor-widget-container">
-<div class="elementor-testimonial-wrapper">
+<div class="elementor-testimonial-wrapper ">
 <div class="elementor-testimonial-content">" Aptent mus quisque porttitor convallis tempora eaque blandit phasellus perspiciatis lectus, exercitationem."</div>
 <div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside">
 <div class="elementor-testimonial-meta-inner">
@@ -1033,6 +1052,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					document.addEventListener( event, lazyloadRunObserver );
 				} );
 			</script>
+      <script>
+        window.addEventListener('scroll', function() {
+          var header = document.querySelector('.main-header-bar');
+          if (window.scrollY > 50) { // Vous pouvez ajuster la valeur à laquelle la classe est ajoutée
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      </script>
+      
 <link rel="stylesheet" id="astra-galleries-css-css" href="wp-content/themes/astra/assets/css/minified/galleries.mine100.css?ver=4.7.2" media="all" />
 <script id="astra-theme-js-js-extra">
 var astra = {"break_point":"768","isRtl":"","is_scroll_to_id":"","is_scroll_to_top":"","is_header_footer_builder_active":"1","responsive_cart_click":"flyout"};

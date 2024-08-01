@@ -256,14 +256,19 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   position: fixed; /* Fixer la barre de navigation en haut de la page */
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; /* S'assurer que la largeur est de 100% */
   z-index: 1000; /* Assurez-vous qu'elle est au-dessus des autres éléments */
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: none; /* Supprimer l'ombre pour une apparence plus plate */
+  background-color: transparent; /* Fond transparent par défaut */
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Ajouter une transition pour l'effet de défilement */
+  padding: 2px 0; /* Réduire le padding pour diminuer la hauteur */
   border: none; /* Supprimer toute bordure */
 }
 
-/* Assurez-vous que le contenu ne se chevauche pas avec la barre fixée */
+/* Classe ajoutée lors du défilement */
+.main-header-bar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond noire avec 80% d'opacité */
+  padding: 5px 0; /* Ajouter un padding pour augmenter la hauteur lors du défilement */
+}
 
 /* Alignement du logo et des liens dans la barre de navigation */
 .main-header-bar .main-header-bar-navigation {
@@ -280,6 +285,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 .main-header-bar .site-branding img {
   display: block; /* Assurez-vous que l'image du logo ne génère pas de marge ou de padding indésirable */
+  height: 30px; /* Ajuster la hauteur du logo pour qu'il soit plus petit */
 }
 
 /* Gestion des sous-menus */
@@ -292,7 +298,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   position: absolute;
   top: 100%; /* Positionner les sous-menus sous l'élément parent */
   left: 0;
-  background: #333; /* Choisissez une couleur de fond pour les sous-menus */
+  background: #000; /* Couleur de fond noire pour les sous-menus */
   box-shadow: none; /* Supprimer l'ombre des sous-menus */
   z-index: 1000; /* Assurez-vous qu'ils sont au-dessus des autres éléments */
 }
@@ -317,7 +323,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     margin-bottom: 1em; /* Ajouter un espacement inférieur */
   }
 }
-
 /* Style pour le bouton du menu déroulant */
 .dropbtn {
   background-color: #fff;
@@ -804,6 +809,16 @@ Skip to content</a>
 			</script>
 <script id="astra-theme-js-js-extra">
 var astra = {"break_point":"768","isRtl":"","is_scroll_to_id":"","is_scroll_to_top":"","is_header_footer_builder_active":"1","responsive_cart_click":"flyout"};
+</script>
+<script>
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('.main-header-bar');
+    if (window.scrollY > 50) { // Vous pouvez ajuster la valeur à laquelle la classe est ajoutée
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
 </script>
 <script src="../wp-content/themes/astra/assets/js/minified/frontend.mine100.js?ver=4.7.2" id="astra-theme-js-js"></script>
 <script src="../wp-includes/js/dist/vendor/react.min7a3b.js?ver=18.2.0" id="react-js"></script>

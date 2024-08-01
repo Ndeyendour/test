@@ -256,14 +256,19 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   position: fixed; /* Fixer la barre de navigation en haut de la page */
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; /* S'assurer que la largeur est de 100% */
   z-index: 1000; /* Assurez-vous qu'elle est au-dessus des autres éléments */
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: none; /* Supprimer l'ombre pour une apparence plus plate */
+  background-color: transparent; /* Fond transparent par défaut */
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Ajouter une transition pour l'effet de défilement */
+  padding: 2px 0; /* Réduire le padding pour diminuer la hauteur */
   border: none; /* Supprimer toute bordure */
 }
 
-/* Assurez-vous que le contenu ne se chevauche pas avec la barre fixée */
+/* Classe ajoutée lors du défilement */
+.main-header-bar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond noire avec 80% d'opacité */
+  padding: 5px 0; /* Ajouter un padding pour augmenter la hauteur lors du défilement */
+}
 
 /* Alignement du logo et des liens dans la barre de navigation */
 .main-header-bar .main-header-bar-navigation {
@@ -280,6 +285,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 .main-header-bar .site-branding img {
   display: block; /* Assurez-vous que l'image du logo ne génère pas de marge ou de padding indésirable */
+  height: 30px; /* Ajuster la hauteur du logo pour qu'il soit plus petit */
 }
 
 /* Gestion des sous-menus */
@@ -292,7 +298,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   position: absolute;
   top: 100%; /* Positionner les sous-menus sous l'élément parent */
   left: 0;
-  background: #333; /* Choisissez une couleur de fond pour les sous-menus */
+  background: #000; /* Couleur de fond noire pour les sous-menus */
   box-shadow: none; /* Supprimer l'ombre des sous-menus */
   z-index: 1000; /* Assurez-vous qu'ils sont au-dessus des autres éléments */
 }
@@ -1070,6 +1076,16 @@ var showcaseCTA = {"adminUrl":"https:\/\/websitedemos.net\/interior-firm-02\/wp-
 <script src="../wp-includes/js/jquery/ui/core.min3f14.js?ver=1.13.2" id="jquery-ui-core-js"></script>
 <script id="elementor-frontend-js-before">
 var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.23.1","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_onboarding":true,"home_screen":true,"ai-layout":true,"landing-pages":true,"e_lazyload":true},"urls":{"assets":"https:\/\/websitedemos.net\/interior-firm-02\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/websitedemos.net\/interior-firm-02\/wp-admin\/admin-ajax.php"},"nonces":{"floatingButtonsClickTracking":"8dc64abbe2"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":8,"title":"About%20-%20Interior%20Design%20Firm","excerpt":"","featuredImage":false}};
+</script>
+<script>
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('.main-header-bar');
+    if (window.scrollY > 50) { // Vous pouvez ajuster la valeur à laquelle la classe est ajoutée
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
 </script>
 <script src="../wp-content/plugins/elementor/assets/js/frontend.min93d8.js?ver=3.23.1" id="elementor-frontend-js"></script>
 <script src="../wp-includes/js/underscore.mind584.js?ver=1.13.4" id="underscore-js"></script>

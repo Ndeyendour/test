@@ -320,6 +320,99 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   src: url(https://websitedemos.net/fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoJYOmb2Rm.ttf) format('truetype');
 }
 
+.main-header-bar {
+  position: fixed; /* Fixer la barre de navigation en haut de la page */
+  top: 0;
+  left: 0;
+  width: 100%; /* S'assurer que la largeur est de 100% */
+  z-index: 1000; /* Assurez-vous qu'elle est au-dessus des autres éléments */
+  background-color: transparent; /* Fond transparent par défaut */
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Ajouter une transition pour l'effet de défilement */
+  padding: 2px 0; /* Réduire le padding pour diminuer la hauteur */
+  border: none; /* Supprimer toute bordure */
+}
+
+/* Classe ajoutée lors du défilement */
+.main-header-bar.scrolled {
+  background-color: rgba(0, 0, 0, 0.8); /* Couleur de fond noire avec 80% d'opacité */
+  padding: 5px 0; /* Ajouter un padding pour augmenter la hauteur lors du défilement */
+}
+
+/* Alignement du logo et des liens dans la barre de navigation */
+.main-header-bar .main-header-bar-navigation {
+  display: flex;
+  justify-content: flex-end; /* Aligner les éléments à droite */
+  align-items: center; /* Centrer verticalement les éléments */
+}
+
+.main-header-bar .site-branding {
+  flex: 1; /* Laisser le logo occuper l'espace restant */
+  display: flex;
+  align-items: center; /* Centrer verticalement le logo */
+}
+
+.main-header-bar .site-branding img {
+  display: block; /* Assurez-vous que l'image du logo ne génère pas de marge ou de padding indésirable */
+  height: 30px; /* Ajuster la hauteur du logo pour qu'il soit plus petit */
+}
+
+/* Gestion des sous-menus */
+.main-header-bar .main-header-bar-navigation .menu-item-has-children {
+  position: relative; /* Nécessaire pour positionner les sous-menus correctement */
+}
+
+.main-header-bar .main-header-bar-navigation .sub-menu {
+  display: none; /* Masquer les sous-menus par défaut */
+  position: absolute;
+  top: 100%; /* Positionner les sous-menus sous l'élément parent */
+  left: 0;
+  background: #000; /* Couleur de fond noire pour les sous-menus */
+  box-shadow: none; /* Supprimer l'ombre des sous-menus */
+  z-index: 1000; /* Assurez-vous qu'ils sont au-dessus des autres éléments */
+}
+
+.menu-item-has-children:hover .sub-menu {
+  display: block; /* Afficher les sous-menus au survol */
+}
+
+/* Styles pour les petits écrans */
+@media (max-width: 768px) {
+  .main-header-bar {
+    position: relative; /* Retirer le positionnement fixe pour les petits écrans */
+  }
+
+  .main-header-bar .main-header-bar-navigation {
+    display: block; /* Empêcher l'affichage en ligne pour les petits écrans */
+  }
+
+  .main-header-bar .site-branding {
+    flex: none; /* Réinitialiser la flexibilité pour les petits écrans */
+    text-align: center; /* Centrer le logo */
+    margin-bottom: 1em; /* Ajouter un espacement inférieur */
+  }
+}
+
+/* Barre de navigation secondaire */
+.nav-bar {
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+  z-index: 500; /* Moins élevé que .main-header-bar */
+}
+
+/* Styles pour les liens dans .nav-bar */
+.nav-bar a {
+  display: inline-block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  background-color: #ddd;
+  color: black;
+}
 
 .nav-bar {
     background-color: #fff;
@@ -369,6 +462,19 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 .show-all .section {
     display: block;
 }
+.pot a {
+  display: inline-block; /* Pour que les liens s'affichent en ligne */
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.pot a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
 </style>
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><!--[if IE]>
 <script src="https://websitedemos.net/interior-firm-02/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=4.7.2" id="astra-flexibility-js"></script>
@@ -537,8 +643,9 @@ Skip to content</a>
 </div>
 <br>
 <br>
+<div class="pot">
 <div class="nav-bar">
-  <a href="#" data-target="">Tous</a>
+<a href="#" data-target="">Tous</a>  
   <a href="#" data-target="commercial">Commercial</a>
   <a href="#" data-target="education">Education</a>
   <a href="#" data-target="hotellerie">Hotellerie</a>
@@ -616,7 +723,8 @@ Skip to content</a>
             <img src="../wp-content/uploads/sites/285/2020/08/office-4-1.jpg" alt="Commercial Image 4">
         </div>
     </div>
-  </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -733,7 +841,16 @@ var showcaseCTA = {"adminUrl":"https:\/\/websitedemos.net\/interior-firm-02\/wp-
 <script id="elementor-frontend-js-before">
 var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.23.1","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_onboarding":true,"home_screen":true,"ai-layout":true,"landing-pages":true,"e_lazyload":true},"urls":{"assets":"https:\/\/websitedemos.net\/interior-firm-02\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/websitedemos.net\/interior-firm-02\/wp-admin\/admin-ajax.php"},"nonces":{"floatingButtonsClickTracking":"8dc64abbe2"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":6,"title":"Portfolio%20-%20Interior%20Design%20Firm","excerpt":"","featuredImage":false}};
 </script>
-
+<script>
+  window.addEventListener('scroll', function() {
+    var header = document.querySelector('.main-header-bar');
+    if (window.scrollY > 50) { // Vous pouvez ajuster la valeur à laquelle la classe est ajoutée
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
       const navLinks = document.querySelectorAll('.nav-bar a');
