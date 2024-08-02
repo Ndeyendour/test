@@ -41,7 +41,7 @@
 	</script>
 <meta name="robots" content="noindex, nofollow" />
 
-<title>About - Cbb Architecture</title>
+<title>CORBUSIER BUSINESS BAT</title>
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="About - Cbb Architecture" />
@@ -252,6 +252,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   font-weight: 900;
   src: url(https://websitedemos.net/fonts.gstatic.com/s/robotoslab/v34/BngbUXZYTXPIvIBgJJSb6s3BzlRRfKOFbvjoJYOmb2Rm.ttf) format('truetype');
 }
+
 .main-header-bar {
   position: fixed; /* Fixer la barre de navigation en haut de la page */
   top: 0;
@@ -284,8 +285,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 }
 
 .main-header-bar .site-branding img {
+  height: 60px; /* Ajuster la hauteur du logo pour qu'il soit plus petit */
+  width: auto; /* Conservez les proportions de l'image */
   display: block; /* Assurez-vous que l'image du logo ne génère pas de marge ou de padding indésirable */
-  height: 30px; /* Ajuster la hauteur du logo pour qu'il soit plus petit */
+  image-rendering: -webkit-optimize-contrast; /* Améliorer le rendu de l'image pour les navigateurs basés sur WebKit */
+  image-rendering: crisp-edges; /* Améliorer le rendu de l'image pour d'autres navigateurs */
 }
 
 /* Gestion des sous-menus */
@@ -310,7 +314,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 /* Styles pour les petits écrans */
 @media (max-width: 768px) {
   .main-header-bar {
-    position: relative; /* Retirer le positionnement fixe pour les petits écrans */
+    position: fixed; /* Retirer le positionnement fixe pour les petits écrans */
   }
 
   .main-header-bar .main-header-bar-navigation {
@@ -428,7 +432,7 @@ Skip to content</a>
 <div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
 <div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
 <div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
-<span class="site-logo-img"><a href="../index.html" class="custom-logo-link transparent-custom-logo" rel="home" itemprop="url" aria-label="Cbb Architecture"><img width="100" height="100" src="images/logo.png" class="custom-logo" alt decoding="async" /></a></span> </div>
+<span class="site-logo-img"><a href="../index.html" class="custom-logo-link transparent-custom-logo" rel="home" itemprop="url" aria-label="Cbb Architecture"><img width="100" height="100" src="../wp-content/uploads/sites/285/2020/08/logo.png" class="custom-logo" alt decoding="async" /></a></span> </div>
 
 </div>
 </div>
@@ -448,10 +452,11 @@ Skip to content</a>
 </div>
 <div class="ast-mobile-header-content content-align-flex-start ">
 <div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-1">
-<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation-mobile" aria-label="Site Navigation: Primary Menu" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-22"><a href="../index.html" class="menu-link">Home</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="../portfolio/index.html" class="menu-link">Portfolio</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-8 current_page_item menu-item-19"><a href="index.html" aria-current="page" class="menu-link">About</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="../testimonials/index.html" class="menu-link">Temoignages</a></li>
+<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation-mobile" aria-label="Site Navigation: Primary Menu" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-22"><a href="../index.html" class="menu-link">Accueil</a></li>
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-8 current_page_item menu-item-19"><a href="../about/index.html" aria-current="page" class="menu-link">A propos</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="../testimonials/index.html" class="menu-link">Services</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="../portfolio/index.html" class="menu-link">Portefolio</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="../contact/index.html" class="menu-link">Contact</a></li>
 </ul></div></nav></div></div> </div>
 </div>
@@ -555,7 +560,7 @@ Skip to content</a>
   <div class="elementor-widget-container">
       <div class="image-text-wrapper">
           <div class="image-column">
-              <img fetchpriority="high" decoding="async" width="610" height="600" src="../wp-content/uploads/sites/285/2020/08/log.png" class="attachment-full size-full wp-image-1107" alt="Image Description" />
+              <img fetchpriority="high" decoding="async" width="610" height="600" src="../wp-content/uploads/sites/285/2020/08/logo22.png" class="attachment-full size-full wp-image-1107" alt="Image Description" />
           </div>
           <div class="text-column">
               <h2>Unissons nos expertises pour bâtir l’avenir </h2>
@@ -975,9 +980,9 @@ Annees de Service </p>
   <div class="ast-builder-footer-grid-columns site-primary-footer-inner-wrap ast-builder-grid-row">
   <div class="site-footer-primary-section-1 site-footer-section site-footer-section-1">
   <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-1" aria-label="Footer Widget 1">
-  <section id="media_image-3" class="widget widget_media_image"><img width="150" height="150" src="file:///C:/Users/USER/Desktop/const--main/wp-content/uploads/sites/285/2020/08/logo.png" class="image wp-image-1020  attachment-thumbnail size-thumbnail" alt style="max-width: 100%; height: auto;" decoding="async" /></section><section id="text-3" class="widget widget_text"> <div class="textwidget"><p>Unissons nos expertises pour bâtir l’avenir</p>
-  </div>
-  </section> </aside>
+    <section id="media_image-3" class="widget widget_media_image"><img width="150" height="150" src="../wp-content/uploads/sites/285/2020/08/logo.png" class="image wp-image-1020  attachment-thumbnail size-thumbnail" alt style="max-width: 100%; height: auto;" decoding="async" /></section><section id="text-3" class="widget widget_text"> <div class="textwidget"><p>Unissons nos expertises pour bâtir l’avenir</p>
+    </div>
+    </section> </aside>
   </div>
   <div class="site-footer-primary-section-2 site-footer-section site-footer-section-2">
   <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-2" aria-label="Footer Widget 2">

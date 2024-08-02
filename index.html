@@ -291,10 +291,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 }
 
 .main-header-bar .site-branding img {
-  width: 100%; /* Assurer que le logo est responsive */
-  height: auto; /* Conserver les proportions du logo */
+  height: 60px; /* Ajuster la hauteur du logo pour qu'il soit plus petit */
+  width: auto; /* Conservez les proportions de l'image */
   display: block; /* Assurez-vous que l'image du logo ne génère pas de marge ou de padding indésirable */
-  margin-bottom: 10px; /* Ajouter un espacement inférieur */
+  image-rendering: -webkit-optimize-contrast; /* Améliorer le rendu de l'image pour les navigateurs basés sur WebKit */
+  image-rendering: crisp-edges; /* Améliorer le rendu de l'image pour d'autres navigateurs */
 }
 
 /* Gestion des sous-menus */
@@ -319,7 +320,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 /* Styles pour les petits écrans */
 @media (max-width: 768px) {
   .main-header-bar {
-    position: relative; /* Retirer le positionnement fixe pour les petits écrans */
+    position: fixed; /* Retirer le positionnement fixe pour les petits écrans */
   }
 
   .main-header-bar .main-header-bar-navigation {
@@ -332,6 +333,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
     margin-bottom: 1em; /* Ajouter un espacement inférieur */
   }
 }
+
 </style>
 <link rel="stylesheet" id="elementor-icons-shared-0-css" href="wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min52d5.css?ver=5.15.3" media="all" />
 <link rel="stylesheet" id="elementor-icons-fa-solid-css" href="wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min52d5.css?ver=5.15.3" media="all" />
@@ -575,7 +577,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="elementor-element elementor-element-141d5d6 e-con-full e-flex e-con e-child" data-id="141d5d6" data-element_type="container">
 <div class="elementor-element elementor-element-99e40ba elementor-absolute elementor-widget elementor-widget-heading" data-id="99e40ba" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="heading.default">
 <div class="elementor-widget-container">
-<span class="elementor-heading-title elementor-size-default">Cbb </span> </div>
+<span class="elementor-heading-title elementor-size-default">CBB </span> </div>
 </div>
 <div class="elementor-element elementor-element-55694db elementor-widget elementor-widget-heading" data-id="55694db" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
@@ -593,7 +595,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="elementor-element elementor-element-b8ab21a elementor-widget elementor-widget-heading" data-id="b8ab21a" data-element_type="widget" data-widget_type="heading.default">
 <div class="elementor-widget-container">
-<h6 class="elementor-heading-title elementor-size-default">Cbb - Architecture Fondateur</h6> </div>
+<h6 class="elementor-heading-title elementor-size-default">CBB -Fondateur</h6> </div>
 </div>
 </div>
 <div class="elementor-element elementor-element-8552962 e-con-full e-flex e-con e-child" data-id="8552962" data-element_type="container">
@@ -994,7 +996,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="ast-builder-footer-grid-columns site-primary-footer-inner-wrap ast-builder-grid-row">
 <div class="site-footer-primary-section-1 site-footer-section site-footer-section-1">
 <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner" data-section="sidebar-widgets-footer-widget-1" aria-label="Footer Widget 1">
-<section id="media_image-3" class="widget widget_media_image"><img width="150" height="150" src="file:///C:/Users/USER/Desktop/const--main/wp-content/uploads/sites/285/2020/08/logo.png" class="image wp-image-1020  attachment-thumbnail size-thumbnail" alt style="max-width: 100%; height: auto;" decoding="async" /></section><section id="text-3" class="widget widget_text"> <div class="textwidget"><p>Unissons nos expertises pour bâtir l’avenir</p>
+<section id="media_image-3" class="widget widget_media_image"><img width="150" height="150" src="wp-content/uploads/sites/285/2020/08/logo.png" class="image wp-image-1020  attachment-thumbnail size-thumbnail" alt style="max-width: 100%; height: auto;" decoding="async" /></section><section id="text-3" class="widget widget_text"> <div class="textwidget"><p>Unissons nos expertises pour bâtir l’avenir</p>
 </div>
 </section> </aside>
 </div>

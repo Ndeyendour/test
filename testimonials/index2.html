@@ -41,7 +41,7 @@
 	</script>
 <meta name="robots" content="noindex, nofollow" />
 
-<title>Temoignage -Cbb </title>
+<title>CORBUSIER BUSINESS BAT</title>
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Testimonials - Cbb Architecture" />
@@ -49,7 +49,7 @@
 <meta property="og:url" content="https://websitedemos.net/interior-firm-02/testimonials/" />
 <meta property="og:site_name" content="Cbb Architecture" />
 <meta property="article:modified_time" content="2024-01-18T07:55:01+00:00" />
-<meta property="og:image" content="https://websitedemos.net/interior-firm-02/wp-content/uploads/sites/285/2020/08/michellep.jpg" />
+<meta property="og:image" content="../wp-content/uploads/sites/285/2020/08/michellep.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:label1" content="Est. reading time" />
 <meta name="twitter:data1" content="2 minutes" />
@@ -260,7 +260,6 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
   border-radius: 5px; /* Facultatif : Arrondit les coins */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Facultatif : Ajoute une ombre pour un effet de profondeur */
 }
-
 .main-header-bar {
   position: fixed; /* Fixer la barre de navigation en haut de la page */
   top: 0;
@@ -293,8 +292,11 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 }
 
 .main-header-bar .site-branding img {
+  height: 60px; /* Ajuster la hauteur du logo pour qu'il soit plus petit */
+  width: auto; /* Conservez les proportions de l'image */
   display: block; /* Assurez-vous que l'image du logo ne génère pas de marge ou de padding indésirable */
-  height: 30px; /* Ajuster la hauteur du logo pour qu'il soit plus petit */
+  image-rendering: -webkit-optimize-contrast; /* Améliorer le rendu de l'image pour les navigateurs basés sur WebKit */
+  image-rendering: crisp-edges; /* Améliorer le rendu de l'image pour d'autres navigateurs */
 }
 
 /* Gestion des sous-menus */
@@ -319,7 +321,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 /* Styles pour les petits écrans */
 @media (max-width: 768px) {
   .main-header-bar {
-    position: relative; /* Retirer le positionnement fixe pour les petits écrans */
+    position: fixed; /* Retirer le positionnement fixe pour les petits écrans */
   }
 
   .main-header-bar .main-header-bar-navigation {
